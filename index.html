@@ -168,6 +168,17 @@
       cursor: pointer;
     }
 
+    .form-success {
+      display: none;
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #e8f8ee;
+      border: 1px solid #b7e7c8;
+      color: #14532d;
+      font-weight: 600;
+    }
+
     section { padding: 70px 0; }
 
     .section-title {
@@ -319,12 +330,12 @@
   <p>Fast response and no-obligation estimate for homes and businesses.</p>
   <form action="https://formsubmit.co/Asad@leadsprodigital.com" method="POST">
     <!-- REQUIRED -->
-    <input type="text" id="fullName" placeholder="Full Name" required>
-    <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+    <input type="text" id="fullName" name="name" placeholder="Full Name" required>
+    <input type="tel" id="phoneNumber" name="phone" placeholder="Phone Number" required>
 
     <!-- OPTIONAL -->
-    <input type="email" id="email" placeholder="Email Address">
-    <select id="service">
+    <input type="email" id="email" name="email" placeholder="Email Address">
+    <select id="service" name="service">
       <option value="">Select Service</option>
       <option>Tree Removal</option>
       <option>Tree Pruning</option>
@@ -333,13 +344,32 @@
       <option>Tree Maintenance</option>
       <option>OTHER</option>
     </select>
-    <textarea id="message" placeholder="Describe your issue..." rows="4"></textarea>
+    <textarea id="message" name="message" placeholder="Describe your issue..." rows="4"></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Tree Service Estimate Request">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" id="nextUrl" value="">
+
     <button type="submit">Request Free Estimate</button>
   </form>
+  <p id="formSuccess" class="form-success">✅ Your message has been sent.</p>
 </div>
 
 <script>
-  document.querySelector('#quote form').addEventListener('submit', function(e) {
+  const estimateForm = document.querySelector('#quote form');
+  const successMessage = document.getElementById('formSuccess');
+  const nextUrlField = document.getElementById('nextUrl');
+
+  if (nextUrlField) {
+    nextUrlField.value = window.location.origin + window.location.pathname + '#quote-sent';
+  }
+
+  if (window.location.hash === '#quote-sent' && successMessage) {
+    successMessage.style.display = 'block';
+  }
+
+  estimateForm.addEventListener('submit', function(e) {
     const name = document.getElementById('fullName').value.trim();
     const phone = document.getElementById('phoneNumber').value.trim();
 

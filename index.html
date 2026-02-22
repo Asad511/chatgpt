@@ -280,7 +280,7 @@
 
 <nav>
   <div class="container nav-container">
-    <a href="index.html" class="logo">Arbor Services Northwest</a>
+    <a href="index.html" class="logo">Arbor Services Northwest LLC</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -293,7 +293,7 @@
 <header>
   <div class="container hero">
     <div class="hero-text">
-      <h1>Professional Tree Care in Tacoma</h1>
+      <h1>Professional Tree Care Services</h1>
       <p>Licensed and trusted for tree removal, pruning, storm cleanup, and ongoing maintenance. We keep your property safe while protecting the health of your trees.</p>
       <div class="hero-actions">
         <a href="tel:2532090298" class="btn btn-call">📞 Call Now (253) 209-0298</a>
@@ -302,24 +302,41 @@
     </div>
 
     <div class="form-box" id="quote">
-      <h2>Get a Free Quote</h2>
-      <p>Fast response and no-obligation estimate for homes and businesses.</p>
-      <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="email" placeholder="Email Address" required>
-        <select required>
-          <option value="">Select Service</option>
-          <option>Tree Removal</option>
-          <option>Tree Pruning</option>
-          <option>Stump Grinding</option>
-          <option>Storm Clean-Up</option>
-          <option>Tree Maintenance</option>
-        </select>
-        <textarea placeholder="Describe your issue..." rows="4"></textarea>
-        <button type="submit">Request Free Estimate</button>
-      </form>
-    </div>
+  <h2>Get a Free Quote</h2>
+  <p>Fast response and no-obligation estimate for homes and businesses.</p>
+  <form id="contactForm">
+    <!-- REQUIRED -->
+    <input type="text" id="fullName" placeholder="Full Name" required>
+    <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+
+    <!-- OPTIONAL -->
+    <input type="email" id="email" placeholder="Email Address">
+    <select id="service">
+      <option value="">Select Service</option>
+      <option>Tree Removal</option>
+      <option>Tree Pruning</option>
+      <option>Stump Grinding</option>
+      <option>Storm Clean-Up</option>
+      <option>Tree Maintenance</option>
+      <option>OTHER</option>
+    </select>
+    <textarea id="message" placeholder="Describe your issue..." rows="4"></textarea>
+    <button type="submit">Request Free Estimate</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    const name = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phoneNumber').value.trim();
+
+    if (name === '' || phone === '') {
+      e.preventDefault();
+      alert('Please fill out your Full Name and Phone Number.');
+      return false;
+    }
+  });
+</script>
   </div>
 </header>
 
@@ -332,19 +349,19 @@
 
     <div class="services">
       <article class="service-box">
-        <img src="https://images.pexels.com/photos/5691643/pexels-photo-5691643.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Arborist removing a tree with chainsaw">
+        <img src="https://images.pexels.com/photos/7812853/pexels-photo-7812853.jpeg" alt="Arborist removing a tree with chainsaw">
         <div>Tree Removal</div>
       </article>
       <article class="service-box">
-        <img src="https://images.pexels.com/photos/6156413/pexels-photo-6156413.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Crew pruning tree branches">
+        <img src="https://images.pexels.com/photos/24595772/pexels-photo-24595772.jpeg" alt="Crew pruning tree branches">
         <div>Tree Pruning</div>
       </article>
       <article class="service-box">
-        <img src="https://images.pexels.com/photos/8820078/pexels-photo-8820078.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Stump grinder at work">
+        <img src="https://images.pexels.com/photos/6835320/pexels-photo-6835320.jpeg" alt="Stump grinder at work">
         <div>Stump Grinding</div>
       </article>
       <article class="service-box">
-        <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Storm cleanup with fallen tree branches">
+        <img src="https://images.pexels.com/photos/32394147/pexels-photo-32394147.jpeg" alt="Storm cleanup with fallen tree branches">
         <div>Storm Clean-Up</div>
       </article>
     </div>
@@ -359,10 +376,10 @@
     </div>
 
     <div class="gallery">
-      <img src="https://images.pexels.com/photos/5767910/pexels-photo-5767910.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Tree cutting crew working in a yard">
-      <img src="https://images.pexels.com/photos/589/garden-grass-lawn-green.jpg?auto=compress&cs=tinysrgb&w=1400" alt="Lawn mowing service for residential property">
-      <img src="https://images.pexels.com/photos/1534609/pexels-photo-1534609.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Tree trimming using a bucket truck">
-      <img src="https://images.pexels.com/photos/175709/pexels-photo-175709.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Debris cleanup with wood chipper after tree work">
+      <img src="https://images.pexels.com/photos/29614969/pexels-photo-29614969.jpeg" alt="Tree cutting crew working in a yard">
+      <img src="https://images.pexels.com/photos/8143668/pexels-photo-8143668.jpeg" alt="Lawn mowing service for residential property">
+      <img src="https://images.pexels.com/photos/11400230/pexels-photo-11400230.jpeg" alt="Tree trimming using a bucket truck">
+      <img src="https://images.pexels.com/photos/34581908/pexels-photo-34581908.jpeg" alt="Debris cleanup with wood chipper after tree work">
     </div>
   </div>
 </section>

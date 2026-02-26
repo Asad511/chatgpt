@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arbor Services Northwest LLC | Tree Care Tacoma</title>
+  <meta name="description" content="Arbor Services Northwest LLC provides tree removal, pruning, stump grinding, and storm cleanup in Tacoma and nearby areas. Request a free estimate today." />
+
+  <!-- Google Tag Manager (GTM-TKB698DD) -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TKB698DD');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    :root {
+      --green-900: #0f2d1e;
+      --green-800: #174c30;
+      --green-700: #1f6a43;
+      --green-500: #2f9a5f;
+      --green-300: #69c58f;
+      --cream: #f7faf8;
+      --white: #ffffff;
+      --text: #173126;
+      --muted: #4b5f56;
+      --border: #d3ddd7;
+      --radius: 14px;
+      --shadow: 0 18px 35px rgba(10, 36, 24, 0.14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--white);
+      color: var(--green-900);
+      padding: 8px 12px;
+      border-radius: 8px;
+      z-index: 999;
+    }
+
+    .skip-link:focus { left: 12px; top: 12px; }
+
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 45, 30, 0.94);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-container {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+
+    .nav-links a {
+      color: #f2fff7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: #b6f2ce; }
+
+    header {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      padding: 72px 0;
+      background:
+        linear-gradient(100deg, rgba(13, 43, 28, 0.88), rgba(16, 66, 40, 0.68)),
+        url("https://images.unsplash.com/photo-1457530378978-8bac673b8062?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255, 255, 255, .16);
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: 999px;
+      padding: 5px 10px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 { font-size: clamp(2rem, 4.7vw, 3.4rem); line-height: 1.1; margin-bottom: 14px; }
+
+    .hero p { max-width: 56ch; color: #e6f5ec; margin-bottom: 22px; font-size: 1.06rem; }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+
+    .trust-points {
+      list-style: none;
+      color: #d8f4e4;
+      display: grid;
+      gap: 8px;
+      font-size: .95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-call { background: var(--green-300); color: var(--green-900); }
+    .btn-quote { color: #fff; border-color: rgba(255, 255, 255, .65); }
+
+    .card {
+      background: rgba(255, 255, 255, .97);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 { color: var(--green-800); margin-bottom: 8px; font-size: 1.6rem; }
+    .card p { color: var(--muted); margin-bottom: 14px; }
+
+    .field-label { display: block; margin-bottom: 6px; font-size: .92rem; font-weight: 600; color: var(--green-900); }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 11px 12px;
+      margin-bottom: 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font: inherit;
+      background: #fff;
+    }
+
+    form button {
+      width: 100%;
+      border: none;
+      background: linear-gradient(120deg, var(--green-800), var(--green-500));
+      color: #fff;
+      font-weight: 700;
+      padding: 13px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .form-success {
+      display: none;
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #e8f8ee;
+      border: 1px solid #b7e7c8;
+      color: #14532d;
+      font-weight: 600;
+    }
+
+    main section { padding: 74px 0; }
+
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 8px; }
+    .section-title p { color: var(--muted); max-width: 65ch; margin: 0 auto; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .service-box {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(20, 60, 38, 0.08);
+      border: 1px solid rgba(17, 61, 39, 0.1);
+    }
+
+    .service-box img { height: 170px; width: 100%; object-fit: cover; }
+    .service-box h3 { padding: 14px 16px 4px; font-size: 1.1rem; }
+    .service-box p { padding: 0 16px 16px; color: var(--muted); font-size: .95rem; }
+
+    .about-strip {
+      background: #fff;
+      border-top: 1px solid #e4ede7;
+      border-bottom: 1px solid #e4ede7;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .about-item {
+      background: #f3faf6;
+      border: 1px solid #d6eadf;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .about-item h3 { font-size: 1rem; margin-bottom: 6px; color: var(--green-800); }
+    .about-item p { font-size: .94rem; color: var(--muted); }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .gallery img {
+      border-radius: 12px;
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .areas {
+      background:
+        linear-gradient(135deg, rgba(17, 61, 39, 0.96), rgba(34, 110, 70, 0.92)),
+        url("https://source.unsplash.com/1600x900/?suburb,trees,neighborhood") center/cover no-repeat;
+      color: #ecfff4;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .areas .section-title p { color: #d3ecde; }
+
+    .areas ul {
+      list-style: none;
+      columns: 2;
+      max-width: 760px;
+      margin: 16px auto 0;
+      display: block;
+    }
+
+    .areas li {
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .16);
+      font-weight: 600;
+    }
+
+    .areas-cta { text-align: center; margin-top: 24px; }
+    .areas-cta .btn { background: #baf7d4; color: #0f2d1e; }
+
+    footer {
+      background: var(--green-900);
+      color: #deefe4;
+      text-align: center;
+      padding: 36px 20px;
+    }
+
+    .footer-phone { color: #baf7d4; text-decoration: none; font-weight: 700; }
+    .footer-phone:hover { text-decoration: underline; }
+
+    @media (max-width: 950px) {
+      .hero { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-container { padding: 12px 0; flex-direction: column; }
+      .nav-links { justify-content: center; }
+      .areas ul { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript - GTM-TKB698DD) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKB698DD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager -->
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav aria-label="Primary navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Arbor Services Northwest LLC</a>
+      <div class="nav-links">
+        <a href="#our-tree-services">Services</a>
+        <a href="#about">Why Us</a>
+        <a href="#our-work">Our Work</a>
+        <a href="#quote">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container hero">
+      <div class="hero-text">
+        <span class="eyebrow">Local Tacoma Tree Experts</span>
+        <h1>Safe, Professional Tree Care for Homes & Businesses</h1>
+        <p>From emergency storm cleanup to precision pruning, our experienced crew helps protect your property and keep your trees healthy year-round.</p>
+        <div class="hero-actions">
+          <a href="tel:2532090298" class="btn btn-call">📞 Call Now (253) 209-0298</a>
+          <a href="#quote" class="btn btn-quote">Get Free Estimate</a>
+        </div>
+        <ul class="trust-points">
+          <li>✅ Fast response times across Tacoma and nearby areas</li>
+          <li>✅ Careful job-site cleanup after every project</li>
+          <li>✅ Honest recommendations and no-pressure estimates</li>
+        </ul>
+      </div>
+
+      <aside class="card" id="quote" aria-labelledby="quote-title">
+        <h2 id="quote-title">Get a Free Quote</h2>
+        <p>Tell us what you need and we will follow up quickly.</p>
+        <form action="https://formsubmit.co/Asad@leadsprodigital.com" method="POST">
+          <label class="field-label" for="fullName">Full Name*</label>
+          <input type="text" id="fullName" name="name" autocomplete="name" required />
+
+          <label class="field-label" for="phoneNumber">Phone Number*</label>
+          <input type="tel" id="phoneNumber" name="phone" autocomplete="tel" required />
+
+          <label class="field-label" for="email">Email (Optional)</label>
+          <input type="email" id="email" name="email" autocomplete="email" />
+
+          <label class="field-label" for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="">Select Service</option>
+            <option>Tree Removal</option>
+            <option>Tree Pruning</option>
+            <option>Stump Grinding</option>
+            <option>Storm Clean-Up</option>
+            <option>Tree Maintenance</option>
+            <option>Other</option>
+          </select>
+
+          <label class="field-label" for="message">Project Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Describe your issue..."></textarea>
+
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="New Tree Service Estimate Request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" id="nextUrl" value="" />
+
+          <button type="submit">Request Free Estimate</button>
+        </form>
+        <p id="formSuccess" class="form-success" aria-live="polite">✅ Thanks! Your message has been sent.</p>
+      </aside>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="our-tree-services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Tree Services</h2>
+          <p>Complete residential and commercial tree care across Tacoma and neighboring communities.</p>
+        </div>
+
+        <div class="services">
+          <article class="service-box">
+            <img src="https://images.pexels.com/photos/7812853/pexels-photo-7812853.jpeg" alt="Arborist removing a tree" loading="lazy" />
+            <h3>Tree Removal</h3>
+            <p>Safe dismantling and removal of hazardous, dead, or unwanted trees.</p>
+          </article>
+          <article class="service-box">
+            <img src="https://images.pexels.com/photos/24595772/pexels-photo-24595772.jpeg" alt="Tree pruning in progress" loading="lazy" />
+            <h3>Tree Pruning</h3>
+            <p>Improve health, appearance, and clearance with proper pruning methods.</p>
+          </article>
+          <article class="service-box">
+            <img src="https://images.pexels.com/photos/6835320/pexels-photo-6835320.jpeg" alt="Stump grinder working" loading="lazy" />
+            <h3>Stump Grinding</h3>
+            <p>Clear old stumps to reclaim yard space and improve curb appeal.</p>
+          </article>
+          <article class="service-box">
+            <img src="https://images.pexels.com/photos/32394147/pexels-photo-32394147.jpeg" alt="Tree storm debris cleanup" loading="lazy" />
+            <h3>Storm Clean-Up</h3>
+            <p>Rapid response to fallen limbs and dangerous post-storm conditions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-strip">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Property Owners Choose Us</h2>
+          <p>We focus on safety, communication, and quality workmanship from first call to final cleanup.</p>
+        </div>
+        <div class="about-grid">
+          <article class="about-item">
+            <h3>Safety-First Crew</h3>
+            <p>Our team plans each job carefully to reduce risk and protect your home, landscaping, and surrounding structures.</p>
+          </article>
+          <article class="about-item">
+            <h3>Reliable Scheduling</h3>
+            <p>We show up when promised and keep you informed with clear updates before and during your project.</p>
+          </article>
+          <article class="about-item">
+            <h3>Thorough Cleanup</h3>
+            <p>Branches, brush, and debris are removed so your property looks clean and ready to enjoy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-work">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Work</h2>
+          <p>Recent projects from local properties in and around Tacoma.</p>
+        </div>
+
+        <div class="gallery">
+          <img src="https://images.pexels.com/photos/29614969/pexels-photo-29614969.jpeg" alt="Tree cutting crew in a residential yard" loading="lazy" />
+          <img src="https://images.pexels.com/photos/11400230/pexels-photo-11400230.jpeg" alt="Tree trimming with a bucket truck" loading="lazy" />
+          <img src="https://images.pexels.com/photos/34581908/pexels-photo-34581908.jpeg" alt="Wood chipper cleanup after tree work" loading="lazy" />
+          <img src="https://images.pexels.com/photos/7812853/pexels-photo-7812853.jpeg" alt="Arborist cutting tree sections safely" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="service-areas" class="areas">
+      <div class="container">
+        <div class="section-title">
+          <h2>Service Areas</h2>
+          <p>Proudly serving homeowners and businesses in:</p>
+        </div>
+        <ul>
+          <li>Tacoma</li>
+          <li>Puyallup</li>
+          <li>Fircrest</li>
+          <li>Lakewood</li>
+          <li>Fife</li>
+          <li>Parkland</li>
+          <li>University Place</li>
+          <li>Ruston</li>
+          <li>Edgewood</li>
+          <li>Steilacoom</li>
+        </ul>
+        <div class="areas-cta">
+          <a href="#quote" class="btn">Get Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Arbor Services Northwest LLC</h3>
+    <p>📞 <a class="footer-phone" href="tel:2532090298">(253) 209-0298</a></p>
+    <p>Professional Tree Care in Tacoma & Nearby Areas</p>
+  </footer>
+
+  <script>
+    const estimateForm = document.querySelector('#quote form');
+    const successMessage = document.getElementById('formSuccess');
+    const nextUrlField = document.getElementById('nextUrl');
+
+    if (nextUrlField) {
+      nextUrlField.value = window.location.origin + window.location.pathname + '#quote-sent';
+    }
+
+    if (window.location.hash === '#quote-sent' && successMessage) {
+      successMessage.style.display = 'block';
+    }
+
+    if (estimateForm) {
+      estimateForm.addEventListener('submit', function(event) {
+        const name = document.getElementById('fullName').value.trim();
+        const phone = document.getElementById('phoneNumber').value.trim();
+
+        if (!name || !phone) {
+          event.preventDefault();
+          alert('Please fill out your Full Name and Phone Number.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
